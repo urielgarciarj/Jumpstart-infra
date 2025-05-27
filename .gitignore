@@ -35,3 +35,40 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ansible related files to ignore
+
+# SSH key files
+*.pem
+*.key
+
+# Vault password files
+.vault_pass.txt
+
+# Inventory files with sensitive data
+inventory.ini
+hosts
+
+# Ansible retry files
+*.retry
+
+# Ansible log files
+ansible.log
+
+# Encrypted variable files (if not meant for version control)
+group_vars/*vault.yml
+host_vars/*vault.yml
+
+# Collections and roles downloaded via ansible-galaxy
+collections/
+roles/
+
+# Fact cache
+.fact_cache/
+
+# Molecule test output
+.molecule/
+
+# Python virtual environments (if used for ansible)
+.venv/
+venv/
